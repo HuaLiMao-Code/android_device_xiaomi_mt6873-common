@@ -25,7 +25,7 @@ $(call inherit-product, device/xiaomi/atom/device.mk)
 $(call inherit-product, vendor/miku/build/product/miku_product.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := aosp_atom
+PRODUCT_NAME := miku_atom
 PRODUCT_DEVICE := atom
 PRODUCT_BRAND := Redmi
 PRODUCT_MODEL := M2004J7AC
