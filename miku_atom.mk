@@ -36,7 +36,7 @@ MIKU_MASTER := HuaLiMao-AQ
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="atom-user 11 RP1A.200720.011 22.2.9 release-keys"
+    PRIVATE_BUILD_DESC="atom-user 11 RP1A.200720.011 V12.5.7.0.RJHCNXM release-keys"
 
 # Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
-BUILD_FINGERPRINT := "Redmi/atom/atom:11/RP1A.200720.011/22.2.9:user/release-keys"
+BUILD_FINGERPRINT := "Redmi/atom/atom:11/RP1A.200720.011/V12.5.7.0.RJHCNXM:user/release-keys"
