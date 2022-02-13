@@ -43,6 +43,16 @@ PRODUCT_EXTRA_VNDK_VERSIONS := 29 30
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_BUILD_SUPER_PARTITION := false
 
+# Overlay
+PRODUCT_PACKAGES := \
+    FrameworkResOverlay \
+    TelephonyOverlay \
+    SystemUIOverlay \
+    SettingsOverlay \
+    TelephonyOverlay \
+    TetheringConfigOverlay \
+    WifiResCommon
+
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio.common@6.0-util \
