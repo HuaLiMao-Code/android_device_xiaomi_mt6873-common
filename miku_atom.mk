@@ -21,6 +21,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 # Inherit from atom device
 $(call inherit-product, device/xiaomi/atom/device.mk)
 
+# Inherit some common miku stuff.
+$(call inherit-product, vendor/miku/build/product/miku_product.mk)
+
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := aosp_atom
 PRODUCT_DEVICE := atom
