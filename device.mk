@@ -189,3 +189,7 @@ PRODUCT_PACKAGES += \
     com.android.ims.rcsmanager \
     PresencePolling \
     RcsService
+
+# Permission
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/configs/privapp-permission/permissions-system_ext.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/permissions-system_ext.xml
