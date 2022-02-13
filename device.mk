@@ -192,4 +192,4 @@ PRODUCT_PACKAGES += \
 
 # Permission
 PRODUCT_COPY_FILES += \
-	$(LOCAL_PATH)/configs/privapp-permission/permissions-system_ext.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/permissions-system_ext.xml
+	$(LOCAL_PATH)/configs/privapp-permission/privapp-permissions-system_ext.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-system_ext.xml
