@@ -1,5 +1,0 @@
-# Camera devices
-/dev/camera_eeprom0                                u:object_r:camera_device:s0
-/dev/camera_eeprom1                                u:object_r:camera_device:s0
-/dev/camera_eeprom2                                u:object_r:camera_device:s0
-/dev/camera_eeprom3                                u:object_r:camera_device:s0
