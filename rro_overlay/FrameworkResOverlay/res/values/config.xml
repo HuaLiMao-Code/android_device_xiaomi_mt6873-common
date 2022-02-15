@@ -592,9 +592,9 @@
         <item>sensorLocationY</item>
         <item>sensorRadius</item>
       -->
-        <item>360</item>
-        <item>1423</item>
-        <item>67</item>
+        <item>445</item>
+        <item>2025</item>
+        <item>189</item>
     </integer-array>
 
      <!-- How long it takes for the HW to start illuminating after the illumination is requested. -->
