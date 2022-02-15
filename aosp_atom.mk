@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2022 The MiKu-UI Project
+# Copyright (C) 2022 The PixelExperience Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -21,17 +21,15 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 # Inherit from atom device
 $(call inherit-product, device/xiaomi/atom/device.mk)
 
-# Inherit some common miku stuff.
-$(call inherit-product, vendor/miku/build/product/miku_product.mk)
+# Inherit some common PixelExperience stuff.
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := miku_atom
+PRODUCT_NAME := aosp_atom
 PRODUCT_DEVICE := atom
 PRODUCT_BRAND := Redmi
 PRODUCT_MODEL := M2004J7AC
 PRODUCT_MANUFACTURER := Xiaomi
-
-MIKU_MASTER := HuaLiMao-AQ
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 

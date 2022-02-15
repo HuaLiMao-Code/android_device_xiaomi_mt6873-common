@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2022 The MiKu-UI Project
+# Copyright (C) 2022 The PixelExperience Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -193,7 +193,3 @@ PRODUCT_PACKAGES += \
     com.android.ims.rcsmanager \
     PresencePolling \
     RcsService
-
-# Permission
-PRODUCT_COPY_FILES += \
-	$(LOCAL_PATH)/configs/privapp-permission/privapp-permissions-system_ext.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-system_ext.xml
