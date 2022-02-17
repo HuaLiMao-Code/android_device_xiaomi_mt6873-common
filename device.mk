@@ -78,6 +78,10 @@ PRODUCT_PACKAGES += \
     libreverbwrapper \
     libvisualizer \
     libtinycompress \
+    libalsautils \
+    libnbaio_mono \
+    libaudiofoundation \
+    tinymix \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/audio_policy_configuration.xml \
@@ -186,7 +190,9 @@ PRODUCT_PACKAGES += \
     init.mt6873.rc \
     init.mt6873.usb.rc \
     fstab.mt6873 \
-    ueventd.mt6873.rc 
+    ueventd.mt6873.rc \
+    setup_MTK_In-Call_volume_adjust.sh \
+    init.mtkincalladj.rc 
 
 # RCS
 PRODUCT_PACKAGES += \
