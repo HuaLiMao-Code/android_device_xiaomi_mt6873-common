@@ -32,7 +32,7 @@
 #define DISPPARAM_HBM_UDFPS_ON "0x1d007ff"
 #define DISPPARAM_HBM_UDFPS_OFF "0x20f0000"
 
-#define UDFPS_STATUS_PATH "/sys/class/touch/tp_dev/fod_status"
+#define UDFPS_STATUS_PATH "/sys/class/touch/tp_dev/fod_test"
 #define UDFPS_STATUS_ON 1
 #define UDFPS_STATUS_OFF 0
 
