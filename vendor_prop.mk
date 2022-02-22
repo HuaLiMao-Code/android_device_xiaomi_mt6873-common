@@ -1,5 +1,6 @@
 # Audio
 PRODUCT_PROPERTY_OVERRIDES += \
+    audio.offload.min.duration.secs=30 \
     aaudio.mmap_exclusive_policy=2 \
     aaudio.mmap_policy=2 \
     persist.audio.button_jack.profile=volume \
@@ -90,6 +91,16 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # FRP
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.frp.pst=/dev/block/by-name/frp \
+
+# IMS
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    persist.dbg.volte_avail_ovr=1 \
+    persist.dbg.vt_avail_ovr=1 \
+    persist.dbg.wfc_avail_ovr=1
+
+# Telephony
+PRODUCT_PRODUCT_PROPERTIES += \
+    persist.vendor.data.iwlan.enable=true
 
 # Graphics
 PRODUCT_PROPERTY_OVERRIDES += \
