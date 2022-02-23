@@ -27,13 +27,12 @@
 #define FINGERPRINT_ERROR_VENDOR 8
 
 #define COMMAND_NIT 10
-#define PARAM_NIT_UDFPS 3
+#define PARAM_NIT_UDFPS 1
 #define PARAM_NIT_NONE 0
 
 #define TOUCH_FOD_ENABLE 10
 
 #define DISPPARAM_PATH "/sys/class/drm/card0-DSI-1/disp_param"
-
 #define DISPPARAM_HBM_UDFPS_ON  "0x20000" 
 #define DISPPARAM_HBM_UDFPS_OFF "0xE0000"
 
@@ -153,7 +152,6 @@ Return<void> BiometricsFingerprint::onShowUdfpsOverlay() {
 Return<void> BiometricsFingerprint::onHideUdfpsOverlay() {
     LOG(ERROR) << "onHideUdfpsOverlay()";
     xiaomiFingerprintService->extCmd(COMMAND_NIT, PARAM_NIT_NONE);
-    set(UDFPS_STATUS_PATH, UDFPS_STATUS_OFF);
     set(DISPPARAM_PATH, DISPPARAM_HBM_UDFPS_OFF);
     touchFeatureService->resetTouchMode(TOUCH_FOD_ENABLE);
     xiaomiDisplayFeatureService->setFeature(0, 17, 0, 1);
