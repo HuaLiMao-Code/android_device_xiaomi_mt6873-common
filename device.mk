@@ -202,3 +202,8 @@ PRODUCT_PACKAGES += \
     com.android.ims.rcsmanager \
     PresencePolling \
     RcsService
+
+# Telephony
+PRODUCT_PACKAGES += \
+    libshim_vtservice \
+    ImsServiceBase
