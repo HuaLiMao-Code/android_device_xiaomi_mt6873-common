@@ -24,6 +24,9 @@ $(call inherit-product, device/xiaomi/atom/device.mk)
 # Inherit some common PixelExperience stuff.
 $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
+# Miui Camera
+$(call inherit-product, vendor/Miuicame/config.mk)
+
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := aosp_atom
 PRODUCT_DEVICE := atom
