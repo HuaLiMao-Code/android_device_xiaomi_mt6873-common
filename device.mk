@@ -168,6 +168,21 @@ PRODUCT_PACKAGES += \
 	vendor.mediatek.hardware.mtkradioex@1.0 \
 	vendor.mediatek.hardware.videotelephony@1.0 \
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/permissions/privapp-permissions-mediatek.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-mediatek.xml
+
+PRODUCT_PACKAGES += \
+    libshim_vtservice
+
+PRODUCT_BOOT_JARS += \
+    mediatek-common \
+    mediatek-framework \
+    mediatek-ims-base \
+    mediatek-ims-common \
+    mediatek-telecom-common \
+    mediatek-telephony-base \
+    mediatek-telephony-common \
+
 # Ramdisk
 PRODUCT_PACKAGES += \
     init.mt6873.rc \
