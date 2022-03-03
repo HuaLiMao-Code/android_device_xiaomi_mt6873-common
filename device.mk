@@ -54,7 +54,8 @@ PRODUCT_PACKAGES := \
     SettingsOverlay \
     TelephonyOverlay \
     TetheringConfigOverlay \
-    WifiResCommon
+    WifiResCommon \
+    CarrierConfigOverlay
 
 # Audio
 PRODUCT_PACKAGES += \
