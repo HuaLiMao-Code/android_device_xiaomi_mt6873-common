@@ -94,6 +94,17 @@ PRODUCT_PACKAGES += \
     libbluetooth_mtk \
     libldacBT_bco
 
+# Camera
+PRODUCT_PACKAGES += \
+    android.hardware.camera.provider@2.4.vendor \
+    android.hardware.camera.provider@2.5.vendor \
+    android.hardware.camera.provider@2.6.vendor \
+    android.hardware.camera.device@3.2.vendor \
+    android.hardware.camera.device@3.3.vendor \
+    android.hardware.camera.device@3.4.vendor \
+    android.hardware.camera.device@3.5.vendor \
+    android.hardware.camera.device@3.6.vendor
+
 # Sensors
 PRODUCT_PACKAGES += \
     libsensorndkbridge
@@ -111,6 +122,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.3-service.xiaomi_atom
 
+PRODUCT_PACKAGES += \
+    IFAAService \
+    SoterService 
+    
 # Vibrator
 PRODUCT_PACKAGES += \
     android.hardware.vibrator@1.0-impl \
@@ -148,6 +163,13 @@ PRODUCT_PACKAGES += \
     android.hardware.ir@1.0-impl \
     android.hardware.ir@1.0-service
 
+# IFAA manager
+PRODUCT_PACKAGES += \
+    org.ifaa.android.manager
+
+PRODUCT_BOOT_JARS += \
+    org.ifaa.android.manager
+
 # Fastbootd
 PRODUCT_PACKAGES += \
     fastbootd
@@ -167,6 +189,27 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
 	vendor.mediatek.hardware.mtkradioex@1.0 \
 	vendor.mediatek.hardware.videotelephony@1.0 \
+	ImsService \
+	EngineerMode \
+	libsink \
+	libem_support_jni \
+	mediatek-common \
+    mediatek-framework \
+    mediatek-ims-base \
+    mediatek-ims-common \
+    mediatek-telecom-common \
+    mediatek-telephony-base \
+    mediatek-telephony-common
+
+	
+PRODUCT_BOOT_JARS += \
+    mediatek-common \
+    mediatek-framework \
+    mediatek-ims-base \
+    mediatek-ims-common \
+    mediatek-telecom-common \
+    mediatek-telephony-base \
+    mediatek-telephony-common
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/permissions/privapp-permissions-mediatek.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-mediatek.xml
