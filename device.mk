@@ -33,6 +33,10 @@ PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
+# Overlays
+DEVICE_PACKAGE_OVERLAYS += \
+    $(LOCAL_PATH)/overlay
+
 # Boot animation
 TARGET_BOOT_ANIMATION_RES := 1080
 
@@ -49,13 +53,11 @@ PRODUCT_BUILD_SUPER_PARTITION := false
 # Overlay
 PRODUCT_PACKAGES := \
     FrameworkResOverlay \
-    TelephonyOverlay \
     SystemUIOverlay \
     SettingsOverlay \
     TelephonyOverlay \
     TetheringConfigOverlay \
     WifiResCommon \
-    CarrierConfigOverlay
 
 # Audio
 PRODUCT_PACKAGES += \
