@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2022 The PixelExperience Project
+# Copyright (C) 2022 The ArrowOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -21,11 +21,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 # Inherit from atom device
 $(call inherit-product, device/xiaomi/atom/device.mk)
 
-# Inherit some common PixelExperience stuff.
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+# Inherit some common ArrowOS stuff.
+$(call inherit-product, vendor/arrow/config/common.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := aosp_atom
+PRODUCT_NAME := arrow_atom
 PRODUCT_DEVICE := atom
 PRODUCT_BRAND := Redmi
 PRODUCT_MODEL := M2004J7AC
