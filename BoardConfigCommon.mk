@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-DEVICE_PATH := device/xiaomi/mt6873-common
+COMMON_PATH := device/xiaomi/mt6873-common
 
 # Architecture
 TARGET_ARCH := arm64
@@ -82,7 +82,7 @@ BOARD_MAIN_PARTITION_LIST := system product
 BOARD_SUPER_PARTITION_ERROR_LIMIT := 9124708352
 
 # FOD
-TARGET_SURFACEFLINGER_UDFPS_LIB := //$(DEVICE_PATH):libudfps_extension.xiaomi_mt6873
+TARGET_SURFACEFLINGER_UDFPS_LIB := //$(COMMON_PATH):libudfps_extension.xiaomi_mt6873
 
 # Partitions
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := false
@@ -107,19 +107,6 @@ TARGET_COPY_OUT_VENDOR := vendor
 TARGET_COPY_OUT_PRODUCT := product
 
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
-
-# Recovery
-BOARD_INCLUDE_RECOVERY_DTBO := true
-BOARD_USES_RECOVERY_AS_BOOT := false
-TARGET_NO_RECOVERY := false
-TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.mt6873
-TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
-TARGET_USERIMAGES_USE_EXT4 := true
-TARGET_USERIMAGES_USE_F2FS := true
-TARGET_USES_MKE2FS := true
-
-# Releasetools
-TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
 
 # Verified Boot
 BOARD_AVB_ENABLE := true

@@ -25,17 +25,15 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 # Call proprietary blob setp
 $(call inherit-product, vendor/xiaomi/mt6873-ims/mt6873-ims-vendor.mk)
 
-# Interfaces
-include $(LOCAL_PATH)/vendor_prop.mk
-PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
+COMMON_PATH := device/xiaomi/mt6873-common
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH)
+    $(COMMON_PATH)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay
+    $(COMMON_PATH)/overlay
 
 # Boot animation
 TARGET_BOOT_ANIMATION_RES := 1080
@@ -177,10 +175,6 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_PACKAGES += \
     fastbootd
 
-# Fstab
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/etc/fstab.mt6873:$(TARGET_COPY_OUT_RAMDISK)/fstab.mt6873
-
 # HIDL
 PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
@@ -215,14 +209,7 @@ PRODUCT_BOOT_JARS += \
     mediatek-telephony-common
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/permissions/privapp-permissions-mediatek.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-mediatek.xml
-
-# Ramdisk
-PRODUCT_PACKAGES += \
-    init.mt6873.rc \
-    init.mt6873.usb.rc \
-    fstab.mt6873 \
-    ueventd.mt6873.rc \
+    $(COMMON_PATH)/configs/permissions/privapp-permissions-mediatek.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-mediatek.xml
 
 # RCS
 PRODUCT_PACKAGES += \
