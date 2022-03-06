@@ -106,7 +106,7 @@ TARGET_COPY_OUT_SYSTEM_EXT := system/system_ext
 TARGET_COPY_OUT_VENDOR := vendor
 TARGET_COPY_OUT_PRODUCT := product
 
-TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
+TARGET_SYSTEM_PROP += $(COMMON_PATH)/system.prop
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
