@@ -14,10 +14,10 @@
 // limitations under the License.
 
 cc_binary {
-    name: "android.hardware.biometrics.fingerprint@2.3-service.xiaomi_atom",
+    name: "android.hardware.biometrics.fingerprint@2.3-service.xiaomi_mt6873",
     relative_install_path: "hw",
     vintf_fragments: ["android.hardware.biometrics.fingerprint@2.3-service.xml"],
-    init_rc: ["android.hardware.biometrics.fingerprint@2.3-service.xiaomi_atom.rc"],
+    init_rc: ["android.hardware.biometrics.fingerprint@2.3-service.xiaomi_mt6873.rc"],
     defaults: ["hidl_defaults"],
     srcs: [
         "service.cpp",
@@ -41,7 +41,7 @@ cc_binary {
 }
 
 cc_library_static {
-    name: "libudfps_extension.xiaomi_atom",
+    name: "libudfps_extension.xiaomi_mt6873",
     srcs: ["UdfpsExtension.cpp"],
     include_dirs: [
         "frameworks/native/services/surfaceflinger/CompositionEngine/include"

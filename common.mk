@@ -23,7 +23,7 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 
 # Call proprietary blob setp
-$(call inherit-product, vendor/xiaomi/atom-ims/atom-ims-vendor.mk)
+$(call inherit-product, vendor/xiaomi/mt6873-ims/mt6873-ims-vendor.mk)
 
 # Interfaces
 include $(LOCAL_PATH)/vendor_prop.mk
@@ -123,7 +123,7 @@ PRODUCT_PACKAGES += \
 
 # UDFPS
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.3-service.xiaomi_atom
+    android.hardware.biometrics.fingerprint@2.3-service.xiaomi_mt6873
 
 PRODUCT_PACKAGES += \
     IFAAService \
@@ -217,17 +217,12 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/permissions/privapp-permissions-mediatek.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-mediatek.xml
 
-PRODUCT_PACKAGES += \
-    libshim_vtservice
-
 # Ramdisk
 PRODUCT_PACKAGES += \
     init.mt6873.rc \
     init.mt6873.usb.rc \
     fstab.mt6873 \
     ueventd.mt6873.rc \
-    setup_MTK_In-Call_volume_adjust.sh \
-    init.mtkincalladj.rc 
 
 # RCS
 PRODUCT_PACKAGES += \

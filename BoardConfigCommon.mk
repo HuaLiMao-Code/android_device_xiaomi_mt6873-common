@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-DEVICE_PATH := device/xiaomi/atom
+DEVICE_PATH := device/xiaomi/mt6873-common
 
 # Architecture
 TARGET_ARCH := arm64
@@ -35,16 +35,12 @@ TARGET_USES_64_BIT_BINDER := true
 ENABLE_CPUSETS := true
 ENABLE_SCHEDBOOST := true
 
-# Assert
-TARGET_OTA_ASSERT_DEVICE := atom
-
 # Build
 BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 BUILD_BROKEN_PREBUILT_ELF_FILES := true
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := atom
 TARGET_NO_BOOTLOADER := true
 TARGET_USES_UEFI := true
 
@@ -62,20 +58,9 @@ BOARD_RAMDISK_OFFSET := 0x07c08000
 BOARD_KERNEL_TAGS_OFFSET := 0x0bc08000
 BOARD_KERNEL_OFFSET := 0x00008000
 
-#BOARD_KERNEL_IMAGE_NAME := Image.gz
-#BOARD_INCLUDE_DTB_IN_BOOTIMG := true
-
-TARGET_FORCE_PREBUILT_KERNEL := true
-
-#BOARD_KERNEL_SEPARATED_DTBO := false
-BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/dtbo.img
-TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/kernel
-TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilt/dtb
-
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_KERNEL_SOURCE := kernel/xiaomi/mt6873
-TARGET_KERNEL_CONFIG := vendor/atom_user_defconfig
 
 BOARD_BOOTIMG_HEADER_VERSION := 2
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset $(BOARD_RAMDISK_OFFSET)
@@ -97,7 +82,7 @@ BOARD_MAIN_PARTITION_LIST := system product
 BOARD_SUPER_PARTITION_ERROR_LIMIT := 9124708352
 
 # FOD
-TARGET_SURFACEFLINGER_UDFPS_LIB := //$(DEVICE_PATH):libudfps_extension.xiaomi_atom
+TARGET_SURFACEFLINGER_UDFPS_LIB := //$(DEVICE_PATH):libudfps_extension.xiaomi_mt6873
 
 # Partitions
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := false
