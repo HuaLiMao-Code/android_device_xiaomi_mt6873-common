@@ -117,15 +117,7 @@ PRODUCT_PACKAGES += \
 
 # TinyXML
 PRODUCT_PACKAGES += \
-    libtinyxml
-
-# UDFPS
-PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.3-service.xiaomi_mt6873
-
-PRODUCT_PACKAGES += \
-    IFAAService \
-    SoterService 
+    libtinyxml 
     
 # Vibrator
 PRODUCT_PACKAGES += \
@@ -163,13 +155,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.ir@1.0-impl \
     android.hardware.ir@1.0-service
-
-# IFAA manager
-PRODUCT_PACKAGES += \
-    org.ifaa.android.manager
-
-PRODUCT_BOOT_JARS += \
-    org.ifaa.android.manager
 
 # Fastbootd
 PRODUCT_PACKAGES += \
